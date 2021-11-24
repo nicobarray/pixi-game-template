@@ -4,6 +4,7 @@ import {
   IApplicationOptions,
   Loader,
   IAddOptions,
+  Container,
 } from "pixi.js";
 
 interface Key {
@@ -62,6 +63,29 @@ function keyboard(value: string) {
   };
 
   return key as Key;
+}
+
+export class Entity extends Container {
+  private sprite_: Sprite;
+  public vx: number;
+  public vy: number;
+
+  constructor(sprite: Sprite) {
+    super();
+
+    this.sprite_ = sprite;
+    this.sprite_.anchor.set(0.5);
+
+    this.vx = 0;
+    this.vy = 0;
+
+    this.addChild(this.sprite_);
+  }
+
+  public update(delta: number) {
+    this.x += this.vx * delta;
+    this.y += this.vy * delta;
+  }
 }
 
 /**

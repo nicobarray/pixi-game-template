@@ -1,28 +1,5 @@
-import { Sprite, Container } from "pixi.js";
-import { Game } from "./lib/engine";
-
-class Entity extends Container {
-  private sprite_: Sprite;
-  public vx: number;
-  public vy: number;
-
-  constructor(sprite: Sprite) {
-    super();
-
-    this.sprite_ = sprite;
-    this.sprite_.anchor.set(0.5);
-
-    this.vx = 0;
-    this.vy = 0;
-
-    this.addChild(this.sprite_);
-  }
-
-  public update(delta: number) {
-    this.x += this.vx * delta;
-    this.y += this.vy * delta;
-  }
-}
+import { Container } from "pixi.js";
+import { Game, Entity } from "./lib/engine";
 
 class MyGame extends Game {
   private player: Entity;

@@ -4,10 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Game</title>
+    <title>Pixi Game Template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        font-size: 16px;
+
+        background: black;
+        color: white;
+      }
+
+      #title {
+        padding: 16px 0;
+        font-size: larger;
+      }
+
+      .center {
+        /* Center horizontaly */
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="title" class="center">Pixi Game Template</div>
+    <div id="root" class="center"></div>
+    <div class="center">🎮 <i>Use the arrow keys to move the player</i></div>
     <script type="module" src="./src/index.ts"></script>
   </body>
 </html>
