@@ -1,8 +1,12 @@
 # PixiJS game template
 
-Clone this repository to start creating a game !
+[> TEST IT HERE <](https://pixi-game-template.vercel.app/)
 
-See src/index.ts for a concrete example.
+See src/index.ts for a simple example or clone this repository to start creating a game !
+
+# How it works
+
+TODO
 
 # Resources
 
